@@ -1,0 +1,4 @@
+[build]
+  publish = "."
+
+# This is a static site: no build command, server, or database is required.

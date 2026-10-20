@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d12">
+  <meta name="description" content="Original fantasy, alternate-universe fiction and illustrated stories, released episode by episode.">
+  <title>Moonlit Archives — Stories Beyond the Veil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Moonlit Archives home"><span class="brand-mark">☾</span><span><strong>Moonlit Archives</strong><small>Stories beyond the veil</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" data-route="home" class="active">Home</a>
+        <a href="#discover" data-route="discover">Discover</a>
+        <a href="#latest" data-route="latest">Latest episodes</a>
+        <a href="#fanfiction" data-route="fanfiction">✧ Fanfiction</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="view active" id="homeView">
+        <div class="ad-slot top-ad" aria-label="Reserved advertisement space">✦ Advertisement · reserved space</div>
+        <section class="hero">
+          <div class="hero-art" aria-hidden="true"><span class="moon"></span><span class="mountain m1"></span><span class="mountain m2"></span><span class="torii">鳥居</span>
+            <span class="firefly f1"></span><span class="firefly f2"></span><span class="firefly f3"></span><span class="firefly f4"></span><span class="firefly f5"></span><span class="firefly f6"></span>
+          </div>
+          <span class="samurai-runner" aria-hidden="true">🥷</span>
+          <div class="hero-copy"><p class="eyebrow">✦ Enter another world ✦</p><h1>Every legend begins<br>with a <em>whisper.</em></h1><p>🌙 Fantasy worlds, alternate timelines and illustrated stories — released one episode at a time.</p><div class="hero-actions"><button class="button primary" data-open-story="red-moon">Explore the featured story <span>↗</span></button><a class="button secondary" href="#discover">Browse all stories ✧</a></div></div>
+          <div class="hero-caption">✦ ARCHIVE 001 · THE VEIL IS THIN TONIGHT ✦</div>
+        </section>
+        <section class="section"><div class="section-heading"><div><p class="eyebrow">Choose your next world</p><h2>Stories from the archive</h2><p class="muted">Pick a series and read at your own pace.</p></div><a class="text-link" href="#discover">View all stories ↗</a></div><div class="story-grid" id="homeStories"></div></section>
+        <section class="section latest-strip"><div class="section-heading"><div><p class="eyebrow">Fresh from the archive</p><h2>Latest episodes</h2></div><a class="text-link" href="#latest">All episodes ↗</a></div><div id="homeLatest" class="episode-list"></div></section>
+      </section>
+
+      <section class="view" id="discoverView"><div class="page-intro"><p class="eyebrow">Find a new obsession</p><h1>Discover stories</h1><p class="muted">Search by title, genre or mood.</p></div><label class="search-box"><span>⌕</span><input id="storySearch" type="search" placeholder="Search stories…" autocomplete="off"></label><div class="filters" id="genreFilters"><button class="filter active" data-genre="All">All stories</button><button class="filter" data-genre="Dark fantasy">Dark fantasy</button><button class="filter" data-genre="Folklore">Folklore</button><button class="filter" data-genre="Mystery">Mystery</button><button class="filter" data-genre="Romance">Romance</button></div><div class="story-grid" id="discoverStories"></div></section>
+
+      <section class="view" id="latestView"><div class="page-intro"><p class="eyebrow">✦ The story continues</p><h1>Latest episodes</h1><p class="muted">New chapters will appear here as they're published.</p></div><div class="episode-list" id="allLatest"></div></section>
+
+      <section class="view" id="fanfictionView"><div class="page-intro"><p class="eyebrow">✧ Familiar worlds, new possibilities</p><h1>Fanfiction stories <span aria-hidden="true">📖</span></h1><p class="muted">Alternate universes, missing moments and endings rewritten by imagination.</p></div><div class="story-grid" id="fanfictionStories"></div><div class="fanfiction-note">🌙 <strong>A new chapter of imagination is coming.</strong><br><span class="muted">Fanfiction series will appear here as they are released. No account needed — just read and wander.</span></div></section>
+
+      <section class="view" id="seriesView"><button class="back-link" data-back>← Back to stories</button><div id="seriesContent"></div></section>
+      <section class="view" id="readerView"><div id="readerContent"></div></section>
+    </main>
+    <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">☾</span><span><strong>Moonlit Archives</strong><small>Stories beyond the veil</small></span></a><p>Made for readers who love getting lost in another world.</p><div class="footer-links"><a href="#home">Home</a><a href="#discover">Discover</a><a href="#latest">Latest episodes</a><a href="#fanfiction">Fanfiction ✧</a></div><small>Original stories and artwork credits will be added with each release.</small></footer>
+  </div>
+  <script src="stories.js"></script><script src="app.js"></script>
+</body>
+</html>
