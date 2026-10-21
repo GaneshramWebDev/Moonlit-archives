@@ -30,3 +30,10 @@ A static, no-login comic/story site. Visitors can read without registering. Ther
 - **The Shadow Heir** is an original dark-fantasy series. Episode 1 ends on a cliffhanger.
 - **The Last Train to Seoul** is an unofficial fictional K-pop-inspired AU. Kim Min-jae is an original fictional character, not a representation of or affiliation with BTS or any real artist. The story is mystery/adventure, not an account of real people.
 - Ad areas are placeholders only. They do not show ads or generate revenue until an ad provider is separately approved and integrated.
+
+
+## Visual refresh
+- Cinematic moonlit hero artwork lives at `assets/images/moonlit-hero.png`.
+- Episode panel artwork lives under `assets/images/comic/`.
+- To add a comic panel, add an image file and set `image: "assets/images/comic/..."` on the matching panel in `stories.js`.
+- Upload the project root to GitHub; Netlify redeploys on commit.
