@@ -61,3 +61,9 @@ body:not([data-view="home"]) .top-ad{display:none}
 @keyframes comic-enter{from{opacity:.25;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes float-glow{0%,100%{transform:translate(0,0);opacity:.45}50%{transform:translate(12px,-16px);opacity:1}}@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:.9}}
 @media(max-width:700px){.site-header{position:relative}.hero{background-position:62% center;min-height:420px}.hero-copy{background:linear-gradient(90deg,rgba(8,7,14,.25),transparent)}.hero h1{max-width:400px}.panel-image{max-height:none}.nav a{font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Reader fix: keep narration and dialogue visible with every illustration. */
+.panel-story{padding:22px 25px 18px;background:linear-gradient(135deg,#211722,#17111b);border-top:1px solid #543342}
+.panel-narration{margin:0;color:#f3e7ef;font:italic clamp(17px,2.2vw,21px)/1.75 Georgia,"Times New Roman",serif;white-space:normal}
+.panel-dialogue{margin:14px 0 0;padding:12px 15px;border-left:2px solid var(--gold);background:#2a1b29;color:#ffe0b0;font:500 16px/1.65 Georgia,"Times New Roman",serif}
+.panel-story .panel-number{display:block;margin-top:18px;color:#ad8fa5;font-size:9px;letter-spacing:.2em}
