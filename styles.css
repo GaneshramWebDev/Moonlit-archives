@@ -147,3 +147,7 @@ body[data-view="reader"] main,body[data-view="reader"] #readerView{min-height:10
 :root[data-theme="light"] .panel-artwork{filter:brightness(1.08)}
 @media(max-width:700px){.theme-picker{flex:1;justify-content:center}.nav.open .theme-picker{margin-top:3px}.comic-reader{padding:0 8px}.comic-toolbar{min-height:49px;gap:7px}.reader-back,.reader-close{padding:7px 9px}.reader-back span{display:none}.reader-heading strong{font-size:14px}.reader-heading span{font-size:10px}.book-stage{padding:6px 0}.narration-box{max-width:84%;top:9px;left:9px;font-size:12px;padding:8px 10px}.speech-bubble{max-width:62%;right:9px;bottom:32px;font-size:13px;padding:9px 12px}.comic-controls{gap:6px;padding:8px 0}.page-button{min-width:0;padding:8px 9px;font-size:10px}.page-progress{width:25vw;font-size:8px}.reader-hint{font-size:8px}}
 @media(max-height:560px){.comic-toolbar{min-height:42px}.book-stage{padding:4px 0}.comic-controls{padding:5px 0}.reader-hint{padding-bottom:2px}.narration-box{top:7px;padding:6px 9px;font-size:11px}.speech-bubble{bottom:25px;padding:7px 10px;font-size:12px}}
+
+/* Keep every supplied illustration visible in cards and series headers. */
+.story-cover img,.detail-art img{object-fit:contain;background:#100c15}
+:root[data-theme="light"] .story-cover img,:root[data-theme="light"] .detail-art img{background:#f1e9e6}
