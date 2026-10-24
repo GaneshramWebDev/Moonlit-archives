@@ -50,4 +50,20 @@ window.ARCHIVE_STORIES = [
     id: "empty-throne", title: "The Empty Throne", genre: "Mystery", mood: "Royal mystery · Secrets",
     description: "The crown remains at dawn. The king is gone. Only a wet footprint leads toward the locked library.", type: "original", status: "Coming soon", updated: "In development", symbol: "♜", coverA: "#4d374e", coverB: "#b08a72", episodes: []
   }
+,
+  {
+    id: "the-velvet-promise", title: "The Velvet Promise", genre: "Romance", mood: "Dark romance · Secrets · Second chances",
+    description: "A guarded night-shift pianist and a grieving bookshop owner make a promise they were never meant to keep. Every letter brings them closer to the truth that tore their families apart.",
+    type: "original", status: "Ongoing", updated: "Episode 01 · The Letter at Closing Time", symbol: "✉", coverA: "#321a32", coverB: "#9d4c70",
+    episodes: [
+      { number: 1, title: "The Letter at Closing Time", subtitle: "Some promises arrive years too late.", status: "available", panels: [
+        { scene: "rain", alt: "Rain on a quiet city street outside a bookshop at night", narration: "At closing time, Elias found a sealed letter beneath the bookshop door. The paper smelled faintly of roses and rain.", dialogue: "If you still remember the winter piano, meet me where the lights go out." },
+        { scene: "candle", alt: "A dim room with a piano and a single warm lamp", narration: "Across the city, Adrian played the same unfinished melody he had played since his brother disappeared. He had promised never to finish it." },
+        { scene: "rose", alt: "A pressed rose inside an old letter on a wooden desk", narration: "The letter carried a name Elias had spent six years trying to forget: Adrian Vale. The man who had walked away from his family on the night Elias lost his." },
+        { scene: "train", alt: "Two distant figures separated by the glass of a late-night train platform", narration: "He went anyway. Adrian waited beneath the station clock, older, quieter, carrying the second half of the letter.", dialogue: "I didn't come to ask you to forgive me. I came to tell you what really happened." },
+        { scene: "moon", alt: "Two silhouettes beneath a pale moon with a city skyline behind them", narration: "Elias wanted to leave. Instead, he stayed long enough to hear the first honest sentence Adrian had ever given him.", dialogue: "Then start at the beginning. And don't leave anything out." }
+      ]},
+      { number: 2, title: "The Things We Kept", subtitle: "Coming soon — the truth has a cost.", status: "coming-soon", panels: [] }
+    ]
+  }
 ];
