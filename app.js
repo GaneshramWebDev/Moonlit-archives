@@ -79,9 +79,10 @@
     if (target.dataset.openStory) { event.preventDefault(); openStory(target.dataset.openStory); }
     if (target.dataset.openEpisode) { event.preventDefault(); openEpisode(target.dataset.openEpisode, target.dataset.episode); }
     if (target.dataset.panel) {
-      const s = storyById(activeStory); const ep = s?.episodes.find(e => e.number === activeEpisode); const next = activePanel + Number(target.dataset.panel);
-      if (ep && next >= 0 && next < ep.panels.length) { activePanel = next; renderReader(); window.scrollTo({top:0,behavior:'smooth'}); }
-      else if (ep && next >= ep.panels.length) { $('.episode-end')?.scrollIntoView({behavior:'smooth',block:'center'}); }
+      const s = storyById(activeStory); const ep = s?.episodes.find(e => e.number === activeEpisode);
+      const panels = (ep?.panels || []).filter((p, i, all) => !p.image || all.findIndex(x => x.image === p.image) === i);
+      const next = activePanel + Number(target.dataset.panel);
+      if (ep && next >= 0 && next < panels.length) { activePanel = next; renderReader(); }
     }
     if (target.hasAttribute('data-back')) navigate('discover');
   });
