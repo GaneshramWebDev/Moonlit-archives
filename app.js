@@ -61,7 +61,7 @@
   function renderReader() {
     const s = storyById(activeStory); const ep = s?.episodes.find(e => e.number === activeEpisode);
     if (!s || !ep) return;
-    const panels = ep.panels || []; const panel = panels[activePanel];
+    const rawPanels = ep.panels || []; const panels = rawPanels.filter((p, i) => !p.image || rawPanels.findIndex(x => x.image === p.image) === i); const panel = panels[activePanel];
     const panelMarkup = panel ? `<article class="comic-panel">${panel.image ? `<img class="panel-image" src="${esc(panel.image)}" alt="Illustrated comic scene ${activePanel + 1}" loading="lazy">` : ''}<div class="panel-story">${panel.narration ? `<p class="panel-narration">${esc(panel.narration)}</p>` : ''}${panel.dialogue ? `<p class="panel-dialogue">${esc(panel.dialogue)}</p>` : ''}<span class="panel-number">MOONLIT ARCHIVES · ${String(activePanel + 1).padStart(2,'0')}</span></div>${panel.caption ? `<div class="panel-caption">${esc(panel.caption)}</div>` : ''}</article>` : '';
     const endMarkup = activePanel === panels.length - 1 ? `<div class="episode-end"><h2>To be continued…</h2><p>Every legend leaves a door open.</p>${s.episodes.some(e => e.number > ep.number && e.status === 'available') ? `<button class="button primary" data-open-episode="${esc(s.id)}" data-episode="${ep.number + 1}">Next episode ↗</button>` : '<a class="button secondary" href="#latest">Return to the archive</a>'}</div>` : '';
     $('#readerContent').innerHTML = `<div class="reader"><div class="reader-top"><button class="back-link" data-open-story="${esc(s.id)}">← ${esc(s.title)}</button><span class="tag">EPISODE ${String(ep.number).padStart(2,'0')}</span></div>${s.disclaimer ? `<p class="muted disclaimer">${esc(s.disclaimer)}</p>` : ''}<p class="eyebrow">${esc(s.genre)} · ${esc(s.title)}</p><h1>${esc(ep.title)}</h1><p class="reader-subtitle">${esc(ep.subtitle || '')}</p>${panelMarkup}<div class="reader-controls"><button class="button secondary" data-panel="-1" ${activePanel === 0 ? 'disabled' : ''}>← Previous panel</button><span class="panel-count">Panel ${activePanel + 1} of ${panels.length}</span><button class="button primary" data-panel="1">${activePanel === panels.length - 1 ? 'Finish episode' : 'Next panel →'}</button></div>${endMarkup}<div class="section"><a class="text-link" href="#latest">← Back to latest episodes</a></div><div class="ad-slot reader-ad" aria-label="Reserved advertisement space">✦ Advertisement · reserved space</div></div>`;
@@ -82,6 +82,12 @@
   $('#storySearch').addEventListener('input', renderDiscover);
   $('#menuToggle').addEventListener('click', () => { const open = $('#mainNav').classList.toggle('open'); $('#menuToggle').setAttribute('aria-expanded', String(open)); });
   window.addEventListener('hashchange', () => { const key = location.hash.slice(1); if (views[key]) navigate(key, false); else if (!key || key === 'home') navigate('home', false); });
+  const themeSelect = $('#themeSelect');
+  const setTheme = value => { document.documentElement.dataset.theme = value; if (themeSelect) themeSelect.value = value; try { localStorage.setItem('moonlit-theme', value); } catch (_) {} };
+  let savedTheme = 'dark'; try { savedTheme = localStorage.getItem('moonlit-theme') || 'dark'; } catch (_) {}
+  setTheme(savedTheme);
+  themeSelect?.addEventListener('change', e => setTheme(e.target.value));
+  document.addEventListener('keydown', e => { if (document.body.dataset.view !== 'reader') return; if (e.key === 'ArrowRight') $('[data-panel="1"]')?.click(); if (e.key === 'ArrowLeft') $('[data-panel="-1"]')?.click(); if (e.key === 'Escape') navigate('discover'); });
   renderStoryGrids();
   const initial = location.hash.slice(1); if (views[initial]) navigate(initial, false); else navigate('home', false);
 })();
