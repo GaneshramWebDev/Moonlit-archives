@@ -1,53 +1,35 @@
-/*
-  STORY ENGINE CONTENT
-  To publish another episode: add an episode object to the matching series below,
-  set status: "available", and add its panels. Image paths are relative to this folder.
-*/
 window.ARCHIVE_STORIES = [
-  {
-    id: "the-shadow-heir", title: "The Shadow Heir", genre: "Dark fantasy", mood: "Cursed bloodline · Hidden kingdom",
-    description: "A runaway apprentice discovers that the monster haunting his dreams has been waiting for him to remember his real name.",
-    type: "original", coverImage: "assets/images/stories/shadow-heir-cover.png", status: "Ongoing", updated: "Episode 01 · The Bell That Rang Twice", symbol: "☾", coverA: "#111b3b", coverB: "#a92e4b",
-    episodes: [
-      { number: 1, title: "The Bell That Rang Twice", subtitle: "At midnight, the dead kingdom called its heir home.", status: "available", panels: [
-        { image: "assets/images/comic/shadow-heir/panel-01.webp", narration: "The first bell rang at midnight. Every dog in the village hid beneath a bed.", dialogue: "Nobody spoke of the second bell.", caption: "THE NIGHT OF THE RED MOON" },
-        { image: "assets/images/comic/shadow-heir/panel-02.webp", narration: "Seventeen-year-old Ren had spent his whole life pretending the silver scar on his wrist was nothing. Tonight, it began to glow through his sleeve.", dialogue: "Not now. Please, not now." },
-        { image: "assets/images/comic/shadow-heir/panel-03.webp", narration: "Outside, the rain stopped in midair. Every drop hung like glass. At the end of the lane stood a warrior wearing a mask split down the middle: one side white, one side black." },
-        { image: "assets/images/comic/shadow-heir/panel-04.webp", narration: "The stranger bowed, as if Ren were a king and not a boy who repaired broken lanterns for coins.", dialogue: "“Your Majesty. The throne has been empty for seventeen years.”" },
-        { image: "assets/images/comic/shadow-heir/panel-01.webp", narration: "Ren backed away. “You have the wrong person.” Behind the mask, the stranger's eyes flickered gold.", dialogue: "“Then why did the kingdom wake when you lied?”" },
-        { image: "assets/images/comic/shadow-heir/panel-02.webp", narration: "The second bell rang. Beneath the village square, something enormous answered. The stone road cracked, revealing a staircase descending into a darkness filled with stars." },
-        { image: "assets/images/comic/shadow-heir/panel-03.webp", narration: "A voice rose from below — gentle, familiar, impossible. Ren had heard it every night in his dreams.", dialogue: "“Little heir… you finally came back.”" },
-        { image: "assets/images/comic/shadow-heir/panel-04.webp", narration: "The masked warrior seized Ren's wrist. The silver scar burned bright enough to turn the rain to steam. Far below, a pair of crimson eyes opened.", dialogue: "“Run,” the warrior whispered. “Your father has found you.”", caption: "TO BE CONTINUED…" }
-      ]},
-      { number: 2, title: "The Staircase Beneath the Village", subtitle: "Coming soon — the first step has already been taken.", status: "coming-soon", panels: [] }
-    ]
-  },
-  {
-    id: "the-last-train", title: "The Last Train to Seoul", genre: "Romance", mood: "K-pop AU · Quiet mystery · Found family",
-    description: "A night-shift illustrator keeps finding unsigned sketches on the last train. The stranger leaving them knows a secret about her missing brother — and a melody nobody has heard in years.",
-    type: "fanfiction", category: "fanfiction", coverImage: "assets/images/stories/last-train-cover.png", status: "Ongoing", updated: "Episode 01 · The Seat by the Window", symbol: "♫", coverA: "#172a46", coverB: "#9c6ba8",
-    disclaimer: "An unofficial, fictional K-pop-inspired alternate universe. Kim Min-jae and all other characters in this story are fictional and are not representations of, or affiliated with, BTS or any real artist.",
-    episodes: [
-      { number: 1, title: "The Seat by the Window", subtitle: "Some strangers arrive before the song does.", status: "available", panels: [
-        { image: "assets/images/comic/last-train/panel-01.webp", narration: "At 12:17 a.m., Seoul looked like a city someone had painted with wet neon. Hana boarded the last train with ink on her fingers and three hours of sleep left in her week." },
-        { image: "assets/images/comic/last-train/panel-02.webp", narration: "The seat by the window was empty — except for a folded paper crane. Inside its wings was a tiny pencil sketch of the station clock, stopped at 12:17." },
-        { image: "assets/images/comic/last-train/panel-03.webp", narration: "“You found it.” A young man in a black cap stood by the doors, mask tucked under his chin, a guitar case resting against one shoulder. His voice was familiar in the way a song from childhood is familiar." },
-        { image: "assets/images/comic/last-train/panel-01.webp", narration: "Hana held up the crane. “Did you draw this?” He glanced at it, then at the empty platform slipping past the glass.", dialogue: "“I drew the first one. I didn't leave this one.”" },
-        { image: "assets/images/comic/last-train/panel-02.webp", narration: "His name was Kim Min-jae. Online, he was known for sold-out shows and never giving interviews. Here, he looked like someone who had been awake for far too long." },
-        { image: "assets/images/comic/last-train/panel-03.webp", narration: "Hana opened her sketchbook. The stranger's drawing matched a page her missing brother had made years ago: the same clock, the same station, the same little star hidden in the corner." },
-        { image: "assets/images/comic/last-train/panel-01.webp", narration: "Min-jae saw the star and went completely still. For the first time, the practiced smile disappeared from his face.", dialogue: "“Where did you get that?”" },
-        { image: "assets/images/comic/last-train/panel-02.webp", narration: "The train lights blinked once. Every window turned black, reflecting only the two of them — and, between their reflections, a third figure standing in the next carriage." },
-        { image: "assets/images/comic/last-train/panel-03.webp", narration: "Min-jae stepped in front of Hana. From his guitar case came a single, impossible note: the opening of a melody that had never been released.", dialogue: "“When the doors open,” he said, “don't follow the person who looks like me.”", caption: "NEXT STOP: A SECRET THAT SHOULD HAVE STAYED BURIED · TO BE CONTINUED…" }
-      ]},
-      { number: 2, title: "The Passenger in Car Seven", subtitle: "Coming soon — the train has made one stop too many.", status: "coming-soon", panels: [] }
-    ]
-  },
-  {
-    id: "moon-petal", title: "The Moon-Petal Well", genre: "Folklore", mood: "Village legends · Wonder",
-    description: "Once every hundred years, moon-petals fall into a village well. This time, the water answers back.", type: "original", status: "Coming soon", updated: "In development", symbol: "✿", coverA: "#39465a", coverB: "#a9a3d6", episodes: []
-  },
-  {
-    id: "empty-throne", title: "The Empty Throne", genre: "Mystery", mood: "Royal mystery · Secrets",
-    description: "The crown remains at dawn. The king is gone. Only a wet footprint leads toward the locked library.", type: "original", status: "Coming soon", updated: "In development", symbol: "♜", coverA: "#4d374e", coverB: "#b08a72", episodes: []
-  }
+ {id:"the-shadow-heir",title:"The Shadow Heir",genre:"Dark fantasy",mood:"Cursed bloodline · Hidden kingdom",description:"A runaway apprentice discovers that the monster haunting his dreams has been waiting for him to remember his real name.",type:"original",coverImage:"assets/images/stories/shadow-heir-cover.png",status:"Ongoing",updated:"Episode 02 · The Staircase Beneath the Village",symbol:"☾",coverA:"#111b3b",coverB:"#a92e4b",episodes:[
+ {number:1,title:"The Bell That Rang Twice",subtitle:"At midnight, the dead kingdom called its heir home.",status:"available",panels:[
+{image:"assets/images/comic/shadow-heir/scene-01.webp", narration:'The first bell rang at midnight. Every dog in the village hid beneath a bed.', dialogue:'Nobody spoke of the second bell.'},
+{image:"assets/images/comic/shadow-heir/scene-02.webp", narration:'Ren had spent seventeen years hiding the silver scar on his wrist. Tonight, it glowed through his sleeve.', dialogue:'Not now. Please, not now.'},
+{image:"assets/images/comic/shadow-heir/scene-03.webp", narration:'The rain stopped in midair. At the end of the lane stood a warrior in a mask split between white and black.', dialogue:''},
+{image:"assets/images/comic/shadow-heir/scene-04.webp", narration:'The stranger bowed as if Ren were a king, not a boy who repaired lanterns for coins.', dialogue:'Your Majesty. The throne has been empty for seventeen years.'},
+{image:"assets/images/comic/shadow-heir/scene-05.webp", narration:'Ren backed away. Behind the mask, the stranger’s eyes flickered gold.', dialogue:'Then why did the kingdom wake when you lied?'},
+{image:"assets/images/comic/shadow-heir/scene-06.webp", narration:'The second bell rang. The road cracked open, revealing stairs descending into a darkness filled with stars.', dialogue:''},
+{image:"assets/images/comic/shadow-heir/scene-07.webp", narration:'A voice rose from below—gentle, familiar, impossible. Ren had heard it in every dream.', dialogue:'Little heir… you finally came back.'},
+{image:"assets/images/comic/shadow-heir/scene-08.webp", narration:'The silver scar burned bright. Far below, a pair of crimson eyes opened.', dialogue:'Run. Your father has found you.'}]},
+{number:2,title:"The Staircase Beneath the Village",subtitle:"The kingdom beneath the village remembers its heir.",status:"available",panels:[
+{image:"assets/images/comic/shadow-heir/scene-09.webp", narration:'The staircase breathed cold air into the village square. Ren heard the voice again, now beneath his own heartbeat.', dialogue:'Ren…'},
+{image:"assets/images/comic/shadow-heir/scene-10.webp", narration:'The masked warrior called himself Kael. He would not explain why his hands trembled near the stairs.', dialogue:'Do not answer anything that knows your name.'},
+{image:"assets/images/comic/shadow-heir/scene-11.webp", narration:'At the seventh step, the walls turned to glass. Behind them, a city floated upside down beneath a black sun.', dialogue:'That is the kingdom they erased.'},
+{image:"assets/images/comic/shadow-heir/scene-12.webp", narration:'A small crown lay on the next landing, dustless and warm. Ren’s scar answered with a pulse of silver light.', dialogue:'It was made for you.'},
+{image:"assets/images/comic/shadow-heir/scene-13.webp", narration:'The voice below became a song Ren’s mother used to hum. The stairs shifted, closing behind him.', dialogue:'If you remember me, open the gate.'}]}]},
+ {id:"the-last-train",title:"The Last Train to Seoul",genre:"Mystery romance",mood:"K-pop-inspired AU · Quiet mystery · Found family",description:"A night-shift illustrator finds unsigned sketches on the last train. The stranger leaving them knows a secret about her missing brother.",type:"fanfiction",category:"fanfiction",coverImage:"assets/images/stories/last-train-cover.png",status:"Ongoing",updated:"Episode 02 · The Passenger in Car Seven",symbol:"♫",coverA:"#172a46",coverB:"#9c6ba8",disclaimer:"An unofficial fictional K-pop-inspired alternate universe. Kim Min-jae and all characters here are fictional and are not representations of, or affiliated with, any real artist.",episodes:[
+ {number:1,title:"The Seat by the Window",subtitle:"Some strangers arrive before the song does.",status:"available",panels:[
+{image:"assets/images/comic/last-train/scene-01.webp", narration:'At 12:17 a.m., Seoul shimmered beyond the glass. Hana boarded the last train with ink on her fingers and three hours of sleep left.', dialogue:''},
+{image:"assets/images/comic/last-train/scene-02.webp", narration:'The seat by the window held a paper crane. Inside its wings was a sketch of the station clock, stopped at 12:17.', dialogue:''},
+{image:"assets/images/comic/last-train/scene-03.webp", narration:'A young man in a black cap stood by the doors, a guitar case resting against his shoulder. His voice felt strangely familiar.', dialogue:'You found it.'},
+{image:"assets/images/comic/last-train/scene-04.webp", narration:'Hana held up the crane. The stranger watched the empty platform slide past.', dialogue:'I drew the first one. I didn’t leave this one.'},
+{image:"assets/images/comic/last-train/scene-05.webp", narration:'The sketch matched a page left by Hana’s missing brother: the same clock, the same star hidden in the corner.', dialogue:'Where did you get that?'},
+{image:"assets/images/comic/last-train/scene-06.webp", narration:'Every window turned black. Between their reflections stood a third figure in the next carriage.', dialogue:''},
+{image:"assets/images/comic/last-train/scene-07.webp", narration:'Min-jae stepped in front of Hana. From his guitar case came one impossible note—the start of an unreleased melody.', dialogue:'When the doors open, don’t follow the person who looks like me.'}]},
+{number:2,title:"The Passenger in Car Seven",subtitle:"The train has made one stop too many.",status:"available",panels:[
+{image:"assets/images/comic/last-train/scene-08.webp", narration:'The train stopped between stations. No announcement came; only the soft ticking of a clock that was not on the wall.', dialogue:'We passed this stop ten minutes ago.'},
+{image:"assets/images/comic/last-train/scene-09.webp", narration:'The figure in Car Seven wore Min-jae’s face, but its reflection smiled a second too late.', dialogue:'Hana, stay behind me.'},
+{image:"assets/images/comic/last-train/scene-10.webp", narration:'She unfolded the paper crane. A new line had appeared beneath the drawing, written in her brother’s handwriting.', dialogue:'Platform zero. Before sunrise.'},
+{image:"assets/images/comic/last-train/scene-11.webp", narration:'Min-jae opened the guitar case. Inside lay a broken metronome and a cassette labelled with the date Hana’s brother vanished.', dialogue:'I promised him I’d never play this again.'},
+{image:"assets/images/comic/last-train/scene-12.webp", narration:'The doors slid open onto a station beneath a sky full of stars. A familiar silhouette waited at the far end of the platform.', dialogue:'Hana… you took your time.'}]}]},
+ {id:"moon-petal",title:"The Moon-Petal Well",genre:"Folklore",mood:"Village legends · Wonder",description:"Once every hundred years, moon-petals fall into a village well. This time, the water answers back.",type:"original",status:"Coming soon",updated:"In development",symbol:"✿",coverA:"#39465a",coverB:"#a9a3d6",episodes:[]},
+ {id:"empty-throne",title:"The Empty Throne",genre:"Mystery",mood:"Royal mystery · Secrets",description:"The crown remains at dawn. The king is gone. Only a wet footprint leads toward the locked library.",type:"original",status:"Coming soon",updated:"In development",symbol:"♜",coverA:"#4d374e",coverB:"#b08a72",episodes:[]}
 ];
